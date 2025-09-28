@@ -3,6 +3,7 @@ import { Container, Sidebar, Main } from './styles';
 
 import Profile from './Profile';
 import Filter from './Filter';
+import Repositories from './Repositories';
 
 export default function RepositoriesPage() {
   return (
@@ -11,7 +12,9 @@ export default function RepositoriesPage() {
         <Profile />
         <Filter />
       </Sidebar>
-      <Main>Main</Main>
+      <Main>
+        <Repositories />
+      </Main>
     </Container>
   );
 }

@@ -19,7 +19,7 @@ export const Avatar = styled.img`
   align-self: center;
   border-radius: 50%;
   width: 70%;
-  margim-bottom: 1rem;
+  margin-bottom: 1rem;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 4.375rem;
