@@ -41,3 +41,21 @@ export const Name = styled.h1`
     display: none;
   }
 `;
+
+export const Inner = styled.div`
+  padding: 1rem;
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
+export const Data = styled.p`
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem;
+
+  svg {
+    margin-right: 0.625rem;
+  }
+`;
