@@ -6,10 +6,46 @@ import Filter from './Filter';
 import Repositories from './Repositories';
 
 export default function RepositoriesPage() {
+  const mockUser = {
+    login: 'HalefAlmeida',
+    id: 38929215,
+    node_id: 'MDQ6VXNlcjM4OTI5MjE1',
+    avatar_url: 'https://avatars.githubusercontent.com/u/38929215?v=4',
+    gravatar_id: '',
+    url: 'https://api.github.com/users/HalefAlmeida',
+    html_url: 'https://github.com/HalefAlmeida',
+    followers_url: 'https://api.github.com/users/HalefAlmeida/followers',
+    following_url: 'https://api.github.com/users/HalefAlmeida/following{/other_user}',
+    gists_url: 'https://api.github.com/users/HalefAlmeida/gists{/gist_id}',
+    starred_url: 'https://api.github.com/users/HalefAlmeida/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/HalefAlmeida/subscriptions',
+    organizations_url: 'https://api.github.com/users/HalefAlmeida/orgs',
+    repos_url: 'https://api.github.com/users/HalefAlmeida/repos',
+    events_url: 'https://api.github.com/users/HalefAlmeida/events{/privacy}',
+    received_events_url: 'https://api.github.com/users/HalefAlmeida/received_events',
+    type: 'User',
+    user_view_type: 'public',
+    site_admin: false,
+    name: 'Halef Dorigan',
+    company: 'Predialize',
+    blog: 'https://www.nortwest.com.br/',
+    location: 'Umuarama/PR - BR',
+    email: null,
+    hireable: null,
+    bio: 'Owner at Nortwest Developer\r\n💻 FullStack Developer at @predialize \r\n',
+    twitter_username: null,
+    public_repos: 14,
+    public_gists: 0,
+    followers: 20,
+    following: 31,
+    created_at: '2018-05-03T01:00:39Z',
+    updated_at: '2025-07-23T11:21:14Z',
+  };
+
   return (
     <Container>
       <Sidebar>
-        <Profile />
+        <Profile user={mockUser} />
         <Filter />
       </Sidebar>
       <Main>

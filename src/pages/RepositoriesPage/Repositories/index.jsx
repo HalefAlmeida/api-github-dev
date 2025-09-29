@@ -6,12 +6,15 @@ import Repository from './Repository';
 
 function Repositories() {
   return (
-    <Container>
-      <Repository />
-      <Repository />
-      <Repository />
-      <Repository />
-    </Container>
+    <>
+      <h1>Repositories</h1>
+      <Container>
+        <Repository />
+        <Repository />
+        <Repository />
+        <Repository />
+      </Container>
+    </>
   );
 }
 

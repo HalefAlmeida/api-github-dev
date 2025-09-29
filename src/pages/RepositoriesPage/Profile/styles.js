@@ -31,11 +31,13 @@ export const Avatar = styled.img`
 
 export const Login = styled.h1`
   font-size: ${(props) => props.theme.fontSize['2xl']};
+  margin-bottom: 0.5rem;
 `;
 
 export const Name = styled.h1`
   font-size: ${(props) => props.theme.fontSize.lg};
   font-weight: normal;
+  margin: 0;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: none;
@@ -43,7 +45,7 @@ export const Name = styled.h1`
 `;
 
 export const Inner = styled.div`
-  padding: 1rem;
+  padding: 0 1rem;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: none;
@@ -54,6 +56,7 @@ export const Data = styled.p`
   display: flex;
   align-items: center;
   line-height: 1.5rem;
+  margin: 0.5rem 0;
 
   svg {
     margin-right: 0.625rem;
