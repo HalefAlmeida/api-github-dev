@@ -5,11 +5,12 @@ import { Container, Name, Description, Footer, Language, Link } from './styles';
 import { langColors } from '../../../../services/config';
 
 function Repository({ repository }) {
+  const color = langColors[repository.language];
   return (
-    <Container color={langColors[repository.language]}>
+    <Container color={color}>
       <Name>{repository.name}</Name>
       <Description>{repository.description}</Description>
-      <Footer color={langColors[repository.language]}>
+      <Footer color={color}>
         <Language>{repository.language}</Language>
         <Link href={repository.html_url} target='_blank'>
           Ver

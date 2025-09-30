@@ -1597,7 +1597,7 @@ export default function RepositoriesPage() {
         <Filter languages={languages} currentLanguage={currentLanguage} onClick={onFilterClick} />
       </Sidebar>
       <Main>
-        <Repositories repositories={repositoriesMock} />
+        <Repositories repositories={repositoriesMock} currentLanguage={currentLanguage} />
       </Main>
     </Container>
   );
