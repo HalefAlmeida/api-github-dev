@@ -1,15 +1,17 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import { Container, Name, Description, Footer, Language, Link } from './styles';
+import { langColors } from '../../../../services/config';
 
-function Repository() {
+function Repository({ repository }) {
   return (
-    <Container color='#f37272'>
-      <Name>Repo Name</Name>
-      <Description>Description</Description>
-      <Footer color='#f37272'>
-        <Language>Language</Language>
-        <Link href='https://nortwest.com.br' target='_blank'>
+    <Container color={langColors[repository.language]}>
+      <Name>{repository.name}</Name>
+      <Description>{repository.description}</Description>
+      <Footer color={langColors[repository.language]}>
+        <Language>{repository.language}</Language>
+        <Link href={repository.html_url} target='_blank'>
           Ver
         </Link>
       </Footer>
@@ -17,4 +19,13 @@ function Repository() {
   );
 }
 
+Repository.propTypes = {
+  repository: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    html_url: PropTypes.string.isRequired,
+    language: PropTypes.string,
+  }).isRequired,
+};
 export default Repository;

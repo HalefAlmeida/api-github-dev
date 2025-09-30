@@ -27,4 +27,3 @@ Filter.propTypes = {
     }),
   ).isRequired,
 };
-// Parei na aula 402 - Componente profile. A próxima é a 403 - Componente filter - parte 1

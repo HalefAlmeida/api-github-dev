@@ -1591,7 +1591,7 @@ export default function RepositoriesPage() {
         <Filter languages={languages} />
       </Sidebar>
       <Main>
-        <Repositories />
+        <Repositories repositories={repositoriesMock} />
       </Main>
     </Container>
   );
