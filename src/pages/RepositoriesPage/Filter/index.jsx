@@ -1,14 +1,8 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import { Container, Selector, Cleaner } from './styles';
 
-export default function Filter() {
-  const languages = [
-    { name: 'JavaScript', count: 10, color: '#b38f00ff' },
-    { name: 'TypeScript', count: 8, color: '#058a00ff' },
-    { name: 'Java', count: 7, color: '#0f1ef1ff' },
-  ];
-
+export default function Filter({ languages }) {
   const selectors = languages.map(({ name, color, count }) => (
     <Selector key={name.toLowerCase()} color={color}>
       <span>{name}</span>
@@ -23,3 +17,14 @@ export default function Filter() {
     </Container>
   );
 }
+
+Filter.propTypes = {
+  languages: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      count: PropTypes.number.isRequired,
+      color: PropTypes.string,
+    }),
+  ).isRequired,
+};
+// Parei na aula 402 - Componente profile. A próxima é a 403 - Componente filter - parte 1
