@@ -29,3 +29,10 @@ export const Main = styled.section`
     padding: 2.5rem 1.25rem;
   }
 `;
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+`
