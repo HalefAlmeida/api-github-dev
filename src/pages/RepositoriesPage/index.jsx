@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Sidebar, Main } from './styles';
 
 import Profile from './Profile';
@@ -7,6 +7,8 @@ import Repositories from './Repositories';
 import { getLangsFrom } from '../../services/api';
 
 export default function RepositoriesPage() {
+  const [currentLanguage, setCurrentLanguage] = useState('');
+
   const userMock = {
     login: 'HalefAlmeida',
     id: 38929215,
@@ -1584,11 +1586,15 @@ export default function RepositoriesPage() {
 
   const languages = getLangsFrom(repositoriesMock);
 
+  const onFilterClick = (language) => {
+    setCurrentLanguage(language);
+  };
+
   return (
     <Container>
       <Sidebar>
         <Profile user={userMock} />
-        <Filter languages={languages} />
+        <Filter languages={languages} currentLanguage={currentLanguage} onClick={onFilterClick} />
       </Sidebar>
       <Main>
         <Repositories repositories={repositoriesMock} />
