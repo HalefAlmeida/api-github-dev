@@ -12,7 +12,7 @@ export const Container = styled.main`
 export const Sidebar = styled.aside`
   background: ${(props) => props.theme.colors.gray900};
   min-width: 20rem;
-  max-heigth: 100vh;
+  max-height: 100vh;
   overflow-y: hidden;
 `;
 
@@ -35,4 +35,4 @@ export const Loading = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-`
+`;
