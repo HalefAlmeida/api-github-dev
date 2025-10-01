@@ -4,14 +4,15 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "prettier"],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   overrides: [],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   rules: {
-    "import/prefer-default-export": "off",
+    'import/prefer-default-export': 'off',
+    'react/require-default-props': 'off',
   },
 };

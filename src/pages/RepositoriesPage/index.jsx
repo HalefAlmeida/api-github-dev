@@ -9,7 +9,7 @@ import { getLangsFrom, getRepositories, getUser } from '../../services/api';
 
 export default function RepositoriesPage() {
   const { login } = useParams();
-  const [currentLanguage, setCurrentLanguage] = useState('');
+  const [currentLanguage, setCurrentLanguage] = useState(undefined);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [repositories, setRepositories] = useState();
